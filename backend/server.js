@@ -12,16 +12,16 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Configure allowed frontend URL
-const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173"; // or your deployed URL
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 app.use(
   cors({
-    origin: FRONTEND_URL,
-    credentials: true, // allow cookies/auth headers
+    origin: FRONTEND_URL.replace(/\/$/, ""), // ✅ removes trailing slash
+    credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
+
 
 app.use(express.json());
 
