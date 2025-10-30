@@ -33,7 +33,7 @@ const Book: React.FC = () => {
   const booking = location.state;
 
   const [discountPercent] = useState(0);
-  const [finalPrice, setFinalPrice] = useState(booking?.price || 0);
+  const [finalPrice] = useState(booking?.price || 0);
 
   if (!booking) {
     return (
