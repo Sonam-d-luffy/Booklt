@@ -5,15 +5,15 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
 import { AdminContext } from "../Context/AdminContext";
 
-interface UserType {
-  _id: string;
-  name?: string;
-}
+// interface UserType {
+//   _id: string;
+//   name?: string;
+// }
 
-interface AdminType {
-  _id: string;
-  name?: string;
-}
+// interface AdminType {
+//   _id: string;
+//   name?: string;
+// }
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
