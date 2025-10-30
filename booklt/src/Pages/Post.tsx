@@ -136,6 +136,13 @@ const Post: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gray-100 px-4 py-6 sm:py-10">
+          {/* 🔹 Add Promo Code Button */}
+      <button
+        onClick={() => navigate("/promo")}
+        className="mb-6 bg-yellow-400 hover:bg-yellow-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition"
+      >
+        ➕ Add Promo Code
+      </button>
       <div className="w-full max-w-lg flex justify-between items-center mb-6">
         <h1 className="text-xl sm:text-3xl font-bold text-yellow-500 text-center flex-1">
           Post New Experience
